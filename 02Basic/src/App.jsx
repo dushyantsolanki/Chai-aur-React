@@ -6,6 +6,7 @@ function App() {
 
   const counter = () => {
     setCount(count + 1);
+    setCount((prevState) => prevState + 1);
   };
   const counterDecreas = () => {
     if (count <= 0) {
