@@ -15,6 +15,7 @@ function Github() {
 
 export default Github;
 
+
 export const useLoaderDataInfo = async () => {
   const data = await fetch("https://api.github.com/users/dushyantsolanki");
  return data.json();
