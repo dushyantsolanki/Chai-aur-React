@@ -3,7 +3,6 @@ import { useEffect } from "react";
 import { useLoadingBar } from "../../contexts/loading_bar/loadingBar";
 export default function Home() {
   const { setProgress } = useLoadingBar();
-  setProgress(0);
   useEffect(() => {
     setProgress(100);
   }, []);

@@ -14,6 +14,7 @@ import About from "./components/About/About";
 import Contact from "./components/Contact/Contact";
 import User from "./components/User/User";
 import Github, { useLoaderDataInfo } from "./components/Github/Github";
+import Root from "./Root";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -31,6 +32,6 @@ const router = createBrowserRouter(
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <Root />
   </React.StrictMode>
 );

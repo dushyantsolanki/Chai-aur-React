@@ -6,11 +6,16 @@ import { useLoadingBar } from "../../contexts/loading_bar/loadingBar";
 function User() {
   const { userId } = useParams();
   const { setProgress } = useLoadingBar();
-  setProgress(0);
   useEffect(() => {
     setProgress(100);
   }, []);
-  return <div>User : {userId}</div>;
+
+  return (
+    <div>
+      User : {userId}
+      {console.log("1")}
+    </div>
+  );
 }
 
 export default User;

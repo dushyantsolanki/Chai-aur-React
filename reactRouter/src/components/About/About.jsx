@@ -2,16 +2,10 @@ import { useEffect } from "react";
 import { useLoadingBar } from "../../contexts/loading_bar/loadingBar";
 
 export default function About() {
-  const { progress, setProgress } = useLoadingBar();
-  setProgress(0);
+  const { setProgress } = useLoadingBar();
   useEffect(() => {
     setProgress(100);
-    console.log("before ", progress);
-
-    // setProgress(0);
-    // console.log("after", progress);
   }, []);
-
   return (
     <div className="py-16 bg-white">
       <div className="container m-auto px-6 text-gray-600 md:px-12 xl:px-6">
@@ -21,6 +15,7 @@ export default function About() {
               src="https://tailus.io/sources/blocks/left-image/preview/images/startup.png"
               alt="image"
             />
+            {console.log("1")}
           </div>
           <div className="md:7/12 lg:w-6/12">
             <h2 className="text-2xl text-gray-900 font-bold md:text-4xl">

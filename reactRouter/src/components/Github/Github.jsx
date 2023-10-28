@@ -6,10 +6,10 @@ import { useLoadingBar } from "../../contexts/loading_bar/loadingBar";
 function Github() {
   const data = useLoaderData();
   const { setProgress } = useLoadingBar();
-  setProgress(0);
   useEffect(() => {
     setProgress(100);
   }, []);
+
   return (
     <>
       <div className="text-center m-4 bg-gray-600 text-white p-4 text-3xl">
@@ -21,6 +21,7 @@ function Github() {
           width={300}
         />
       </div>
+      {console.log("1")}
     </>
   );
 }
