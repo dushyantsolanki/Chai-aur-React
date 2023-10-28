@@ -1,4 +1,17 @@
+import { useEffect } from "react";
+import { useLoadingBar } from "../../contexts/loading_bar/loadingBar";
+
 export default function About() {
+  const { progress, setProgress } = useLoadingBar();
+  setProgress(0);
+  useEffect(() => {
+    setProgress(100);
+    console.log("before ", progress);
+
+    // setProgress(0);
+    // console.log("after", progress);
+  }, []);
+
   return (
     <div className="py-16 bg-white">
       <div className="container m-auto px-6 text-gray-600 md:px-12 xl:px-6">

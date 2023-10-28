@@ -14,11 +14,14 @@ import Cards from "../Cards/Cards";
 
 function NavBar() {
   const [item, setItem] = useState(null);
+  const v1 = "Dushyant";
+  const obj = { v1 };
+  console.log(obj);
 
   const image = "https://source.unsplash.com/featured/1080x720";
   return (
     <>
-      <AddToCartProvider value={{item,setItem}}>
+      <AddToCartProvider value={{ item, setItem }}>
         <div className="container mx-auto">
           <Navbar>
             <NavbarBrand>

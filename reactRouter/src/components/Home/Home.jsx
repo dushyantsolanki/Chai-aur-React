@@ -1,5 +1,12 @@
 import { Link } from "react-router-dom";
+import { useEffect } from "react";
+import { useLoadingBar } from "../../contexts/loading_bar/loadingBar";
 export default function Home() {
+  const { setProgress } = useLoadingBar();
+  setProgress(0);
+  useEffect(() => {
+    setProgress(100);
+  }, []);
   return (
     <div className="mx-auto w-full max-w-7xl">
       <aside className="relative overflow-hidden text-black rounded-lg sm:mx-16 mx-2 sm:py-16">
